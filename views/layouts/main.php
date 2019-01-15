@@ -28,6 +28,7 @@ PixelAdminAssets::register($this);
     <meta charset="<?=Yii::$app->charset?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/jpg" href="<?= Url::to(['/img/pegawai.png']) ?>" title="<?= Yii::$app->name ?>">
     <?php $this->registerCsrfMetaTags()?>
 
     <title><?=Html::encode($this->title)?></title>
@@ -51,7 +52,7 @@ PixelAdminAssets::register($this);
 
 <nav class="navbar px-navbar">
     <div class="navbar-header">
-        <?=Html::a('Basic App', ['/site/index'], ['class' => 'navbar-brand']);?>
+        <?=Html::a(Yii::$app->name, ['/site/index'], ['class' => 'navbar-brand']);?>
         <?php // Html::a($configManager->getItemValue('general.appName'), ['/site/index'], ['class' => 'navbar-brand']); ?>
     </div>
 

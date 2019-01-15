@@ -9,6 +9,7 @@
 use app\components\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\helpers\Url;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -20,12 +21,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="box-row">
                     <div class="box-cell col-md-5 bg-primary p-a-4">
                         <div class="text-xs-center text-md-left">
-                            <a class="px-demo-brand px-demo-brand-lg text-center " href="/">
-                                <?= Html::img(['/favicon.ico'], ['style' => 'max-width: 100%', 'class' => 'm-b-1']); ?>
+                            <a class="px-demo-brand px-demo-brand-lg text-center " href="<?= Url::base() ?>">
+                                <?= Html::img(['/img/pegawai.png'], ['style' => 'max-width: 100%', 'class' => 'm-b-1']); ?>
                                 <br/>
                                 <span class="font-size-20 line-height-1"><?= Yii::$app->name; ?></span>
                             </a>
-                            <div class="font-size-15 m-t-1 line-height-1 text-center"><?= Yii::$app->name; ?></div>
+                            <div class="font-size-15 m-t-1 line-height-1 text-center">
+                                Sistem Informasi Kepegawaian
+                            </div>
                         </div>
                     </div>
 
@@ -49,14 +52,14 @@ $this->params['breadcrumbs'][] = $this->title;
                             <input type="password" class="page-signin-form-control form-control" id="loginform-password" name="LoginForm[password]" placeholder="Password">
                         </fieldset>
 
-                        <div class="clearfix">
+                        <!-- <div class="clearfix">
                             <label class="custom-control custom-checkbox pull-xs-left">
                                 <input type="checkbox" class="custom-control-input">
                                 <span class="custom-control-indicator"></span>
                                 Remember me
                             </label>
 
-                        </div>
+                        </div> -->
 
                         <button type="submit" class="btn btn-block btn-lg btn-primary m-t-3">Masuk</button>
 
@@ -65,7 +68,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         <div class="p-y-3 p-x-4 b-t-1 bg-white darken" id="page-signin-social">
                             <p>
-                                <a href="#" class="font-size-12 text-muted pull-xs-left" id="px-demo-signup-link">Daftar Sekarang</a>
                                 <a href="#" class="font-size-12 text-muted pull-xs-right" id="page-signin-forgot-link">Lupa Password Anda?</a>
                             </p>
                         </div>
@@ -95,10 +97,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             // ])->label(false) 
                             ?>
 
-                            <button type="submit" class="btn btn-block btn-lg btn-primary m-t-3">Kirim Tautan Reset Password</button>
+                            <button type="" class="btn btn-block btn-lg btn-primary m-t-3">Harap Hubungi TIM EDP.</button>
 
                         <?php ActiveForm::end(); ?>
-                        <div class="p-y-3 p-x-4 b-t-1 bg-white darken hidden" id="page-back-to-login">
+                        <div class="p-y-3 p-x-4 b-t-1 bg-white darken hidden" id="page-back-to-login" style="margin-top: 36.4%;">
                             <p>
                                 <a href="#" class="font-size-12 text-muted pull-xs-left" id="page-signin-forgot-back">← Kembali ke Form Login</a>
                             </p>

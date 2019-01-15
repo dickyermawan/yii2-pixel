@@ -16,8 +16,8 @@ class PixelAdminAssets extends AssetBundle
         // basic themes
         'css/pixeladmin.min.css',
         'css/widgets.min.css',
-        'css/themes/purple-hills.min.css',
-        // 'css/themes/candy-blue.min.css',
+        // 'css/themes/purple-hills.min.css',
+        'css/themes/candy-blue.min.css',
         'css/site.css',
     ];
     public $js = [
